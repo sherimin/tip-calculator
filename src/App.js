@@ -58,6 +58,7 @@ function App() {
 
   return (
     <div className="body">
+      <main>
       <img src={logo} alt="logo" className="logo" />
       <div className="calculator-container">
         <form className="input-container">
@@ -104,7 +105,6 @@ function App() {
 
           <div className="input-box">
             <label>Number of People</label>
-            
             <input
               type="number"
               value={numOfPeople}
@@ -126,9 +126,9 @@ function App() {
                 <div className="result-title">Tip Amount</div>
                 <div className="result-subtitle">/ person</div>
               </div>
-              <div className="result-amount">
+              <h1 className="result-amount">
               ${tipPerPerson ? tipPerPerson : '0.00'}
-              </div>
+              </h1>
             </div>
 
             <div className="result-box-total">
@@ -136,9 +136,9 @@ function App() {
                 <div className="result-title">Total</div>
                 <div className="result-subtitle">/ person</div>
               </div>
-              <div className="result-amount">
+              <h1 className="result-amount">
               ${totalPerPerson ? totalPerPerson : '0.00'}
-              </div>
+              </h1>
             </div>
           </div>
           <button onClick={() => handleReset()}>Reset</button>
@@ -152,6 +152,7 @@ function App() {
         </a>
         . Coded by <a href="https://github.com/sherimin">@sherimin</a>.
       </div>
+      </main>
     </div>
   );
 }
